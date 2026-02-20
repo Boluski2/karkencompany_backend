@@ -11,8 +11,13 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send('Server is running');
+});
 
-app.post('/send-email', async (req, res) => {
+
+
+app.post('/', async (req, res) => {
     if (req.method !== 'POST') {
         return res.status(405).json({ status: 'failed', response: 'Method not allowed' });
     }
