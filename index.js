@@ -356,7 +356,7 @@ app.post('/', async (req, res) => {
 `;
 
     const { data, error } = await resend.emails.send({
-      from: 'Lamikawakila Investments <sophie@lamikawakila.com>',
+      from: 'karken Company <hello@karkencompany.lt',
       to: [process.env.RECIPIENT_EMAIL],
       reply_to: email,
       subject: `New Contact Form Submission: ${subjectLabels[subject] || subject} from ${fullName}`,
